@@ -11,6 +11,22 @@ class Node:
         self.data = data
         self.next = next_node
 
+    def get_data(self):
+        """Returns the data of the node."""
+        return self.data
+
+    def set_data(self, data):
+        """Sets the data of the node."""
+        self.data = data
+
+    def get_next(self):
+        """Returns the next node."""
+        return self.next
+
+    def set_next(self, next_node):
+        """Sets the next node."""
+        self.next = next_node
+
 
 class LinkedList:
     """
