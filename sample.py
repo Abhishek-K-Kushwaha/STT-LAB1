@@ -1,12 +1,22 @@
+"""
+This module implements a simple linked list and its operations.
+"""
+
 class Node:
-    """Represents a node in a linked list."""
+    """
+    Represents a node in a linked list.
+    Stores data and a reference to the next node.
+    """
     def __init__(self, data, next_node=None):
         self.data = data
         self.next = next_node
 
 
 class LinkedList:
-    """A simple linked list implementation."""
+    """
+    A simple linked list implementation with operations to
+    insert at the head and print the list.
+    """
     def __init__(self):
         self.head = None
 
