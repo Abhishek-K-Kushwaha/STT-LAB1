@@ -1,34 +1,38 @@
 class Node:
-
-  def __init__(self, data, next=None):
-    self.data = data
-    self.next = next
-
-
-class linked_list:
-
-  def __init__(self):
-    self.head = None
-
-  def insert_at_head(self, data):
-    node = Node(data, self.head)
-    self.head = node
-
-  def print(ll):
-    if ll.head == None:
-      print("empty ll")
-      return
-
-    else:
-      while ll.head != None:
-        print(ll.head.data, end="-")
-        ll.head = ll.head.next
+    """Represents a node in a linked list."""
+    def __init__(self, data, next_node=None):
+        self.data = data
+        self.next = next_node
 
 
-ll1 = linked_list()
+class LinkedList:
+    """A simple linked list implementation."""
+    def __init__(self):
+        self.head = None
+
+    def insert_at_head(self, data):
+        """Insert a new node with the given data at the head of the list."""
+        node = Node(data, self.head)
+        self.head = node
+
+    def print_list(self):
+        """Prints the linked list elements."""
+        if self.head is None:
+            print("Empty linked list")
+            return
+
+        current = self.head
+        while current is not None:
+            print(current.data, end=" -> ")
+            current = current.next
+        print("None")
+
+
+# Example usage
+ll1 = LinkedList()
 ll1.insert_at_head(13)
 ll1.insert_at_head(25)
 ll1.insert_at_head(50)
 ll1.insert_at_head(75)
 
-ll1.print()
+ll1.print_list()
